@@ -1,80 +1,149 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Studio Bebop Links</title>
-  <style>
-    body {
-      background-color: #0d0d0d;
-      font-family: "Helvetica Neue", "Arial", sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-      color: #e0e0e0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Bebop Links</title>
+
+<style>
+body {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* カード全体 */
+.profile-card {
+    margin: 40px auto;
+    background: #111;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 0 20px #0f0;
+}
+
+/* ロゴ（丸枠） */
+.logo-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 4px solid #0f0;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* “Studio Bebop” の文字 */
+.studio-name {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #0f0;
+}
+
+/* 電話番号リンク */
+.phone {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.phone a {
+    color: #0f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SNS アイコンの並び */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* アイコン1個あたり */
+.icon-box {
+    text-align: center;
+}
+
+.icon-box img {
+    width: 70px;
+    border-radius: 15px;
+    padding: 10px;
+    background: #111;
+    box-shadow: 0 0 10px #0f0;
+}
+
+.icon-box span {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* スマホ縦並び */
+@media (max-width: 600px) {
+    .icon-container {
+        flex-direction: column;
+        gap: 25px;
     }
 
-    h1 {
-      font-size: 36px;
-      color: #00ff99;
-      text-shadow: 0 0 10px #00ff99;
-      margin-bottom: 50px;
-      letter-spacing: 2px;
-    }
-
-    .link {
-      display: inline-block;
-      text-decoration: none;
-      color: #00ff99;
-      margin: 25px;
-      transition: 0.3s;
-      font-size: 18px;
-    }
-
-    .link img {
-      width: 80px;
-      height: 80px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 255, 153, 0.4);
-      background-color: #111;
-      padding: 10px;
-      transition: 0.3s;
-    }
-
-    .link:hover img {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(0, 255, 153, 0.8);
-    }
-
-    footer {
-      margin-top: 60px;
-      color: #666;
-      font-size: 14px;
-      border-top: 1px solid #222;
-      padding-top: 20px;
-    }
-   
-    .social-link {
-        width: 100px;
-        height: 100px;
+    .icon-box img {
+        width: 90px;
     }
 }
-  </style>
+</style>
 </head>
+
 <body>
-  <h1>Studio Bebop SNS Links</h1>
 
-  <a class="link" href="https://www.instagram.com/bebop_fukuoka/" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"><br>Instagram
-  </a>
+<div class="profile-card">
 
-  <a class="link" href="https://x.com/BEBOP_FUKUOKA/" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X"><br>X（Twitter）
-  </a>
+    <!-- ロゴ丸アイコン -->
+    <div class="logo-circle">
+        <img src="logo.png" alt="Studio Bebop Logo">
+    </div>
 
-  <a class="link" href="https://www.youtube.com/channel/UCRZTBE78w2dsmu2mYCWUhLQ/" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"><br>YouTube
-  </a>
+    <!-- 店名 -->
+    <div class="studio-name">Studio Bebop</div>
 
-  <footer>© 2025 Studio Bebop</footer>
+    <!-- 電話番号（タップで発信） -->
+    <div class="phone">
+        <a href="tel:090-0000-0000">📞 090-0000-0000</a>
+    </div>
+
+    <!-- SNS リンク -->
+    <div class="icon-container">
+
+        <div class="icon-box">
+            <a href="https://instagram.com/___">
+                <img src="insta.png" alt="Instagram">
+            </a>
+            <span>Instagram</span>
+        </div>
+
+        <div class="icon-box">
+            <a href="https://twitter.com/___">
+                <img src="x.png" alt="X">
+            </a>
+            <span>X (Twitter)</span>
+        </div>
+
+        <div class="icon-box">
+            <a href="https://youtube.com/___">
+                <img src="youtube.png" alt="YouTube">
+            </a>
+            <span>YouTube</span>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>

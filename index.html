@@ -43,7 +43,7 @@ body {
 .tel-number {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .tel-number a {
@@ -55,6 +55,27 @@ body {
 }
 
 .tel-number a:hover {
+  text-shadow:
+      0 0 10px #00ff8a99,
+      0 0 18px #00ff8a66;
+}
+
+/* 住所（Googleマップリンク）*/
+.address {
+  font-size: 15px;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.address a {
+  color: #00ff8a;
+  text-decoration: none;
+  text-shadow:
+      0 0 6px #00ff8a55,
+      0 0 10px #00ff8a44;
+}
+
+.address a:hover {
   text-shadow:
       0 0 10px #00ff8a99,
       0 0 18px #00ff8a66;
@@ -107,7 +128,14 @@ body {
 
   <!-- 電話番号（タップで発信） -->
   <div class="tel-number">
-    <a href="tel:0929630895">TEL 092-963-0895</a>
+    <a href="tel:0929630895">☎️ 092-963-0895</a>
+  </div>
+
+  <!-- 住所（Googleマップリンク） -->
+  <div class="address">
+    <a href="https://www.google.com/maps/search/?api=1&query=福岡県糟屋郡新宮町上府北2丁目9-60" target="_blank">
+      福岡県糟屋郡新宮町上府北２丁目９−６０
+    </a>
   </div>
 
   <div class="sns-links">

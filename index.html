@@ -39,7 +39,7 @@ body {
       0 0 18px #00ff8a33;
 }
 
-/* 電話 & 住所のスタイル（ボタン無し） */
+/* 電話 & 住所（ボタンなし） */
 .contact-line {
   display: flex;
   align-items: center;
@@ -52,8 +52,9 @@ body {
   transition: 0.25s;
 }
 
+/* ← 追加した "ふんわり光る" */
 .contact-line:hover {
-  text-shadow: 0 0 8px #00ff8a66;
+  text-shadow: 0 0 6px #00ff8a55, 0 0 12px #00ff8a44;
 }
 
 /* 電話/住所アイコン */
@@ -71,7 +72,7 @@ body {
   margin-top: 20px;
 }
 
-/* SNSボタン（最初のやつそのまま） */
+/* SNSボタン（最初のやつ） */
 .sns-item {
   display: flex;
   align-items: center;
@@ -86,14 +87,14 @@ body {
   justify-content: flex-start;
 }
 
-/* SNSアイコン（最初の緑） */
+/* SNSアイコン（緑） */
 .sns-icon svg {
   width: 26px;
   height: 26px;
   fill: #00ff8a;
 }
 
-/* SNS hover（前のふんわり光るやつ） */
+/* SNS hover（ふんわり光る） */
 .sns-item:hover {
   background: #111;
   box-shadow: 0 0 12px #00ff8a66;
@@ -107,7 +108,7 @@ body {
 
   <h1 class="sns-title">STUDIO BEBOP</h1>
 
-  <!-- 電話（ボタンなし、タップ可能） -->
+  <!-- 電話 -->
   <a href="tel:0929630895" class="contact-line">
     <span class="contact-icon">
       <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.49a1 1 0 01-1 1A17.91 17.91 0 012 6a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.01l-2.23 2.1z"/></svg>
@@ -115,7 +116,7 @@ body {
     092-963-0895
   </a>
 
-  <!-- 住所（ボタンなし、タップでGoogle Maps） -->
+  <!-- 住所 -->
   <a href="https://www.google.com/maps?q=福岡県糟屋郡新宮町上府北２丁目９−６０"
      class="contact-line" target="_blank">
     <span class="contact-icon">
@@ -134,7 +135,7 @@ body {
       Instagram
     </a>
 
-    <!-- X(Twitter) -->
+    <!-- X -->
     <a href="https://x.com/___" class="sns-item">
       <span class="sns-icon">
         <svg viewBox="0 0 24 24"><path d="M18.146 2H21l-7.59 8.602L22 22h-7.184l-5.01-6.447L4.41 22H2l8.218-9.3L2 2h7.297l4.713 6.118L18.146 2z"/></svg>

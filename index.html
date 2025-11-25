@@ -15,7 +15,7 @@ body {
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-/* タイトルの発光 */
+/* タイトル発光 */
 h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 38px;
@@ -37,18 +37,22 @@ h1 {
     color: #00ff99;
     text-decoration: none;
     transition: 0.3s ease;
+    white-space: nowrap; /* ← 改行を防ぐ */
 }
 
 .info-link:hover {
-    text-shadow: 0 0 6px #00ff66;
     color: #00ffcc;
+    text-shadow:
+        0 0 4px #00ff66,
+        0 0 10px #00ff66,
+        0 0 18px #00ff88; /* ← ふんわり光る */
 }
 
 .info-icon {
     font-size: 20px;
 }
 
-/* SNS ボタン（前と同じデザイン） */
+/* SNS ボタン（前のデザインを再現） */
 .snscard {
     width: 80%;
     max-width: 300px;
@@ -71,7 +75,6 @@ h1 {
     transform: translateY(-3px);
 }
 
-/* SNSアイコンの色は固定で良い感じの緑 */
 .snscard i {
     font-size: 24px;
     color: #00ff99;
@@ -79,7 +82,6 @@ h1 {
 
 </style>
 
-<!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a2e0e9c6c4.js" crossorigin="anonymous"></script>
 
 </head>
@@ -95,13 +97,14 @@ h1 {
 
 <br>
 
-<!-- 住所 -->
-<a href="https://maps.google.com/?q=福岡県糟屋郡新宮町上府北２丁目９−６０" class="info-link" target="_blank">
+<!-- 住所（スマホで改行しない & 光る） -->
+<a href="https://maps.google.com/?q=福岡県糟屋郡新宮町上府北２丁目９−６０"
+   class="info-link" target="_blank">
     <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
     福岡県糟屋郡新宮町上府北２丁目９−６０
 </a>
 
-<!-- SNSリンク -->
+<!-- SNS -->
 <a class="snscard" href="https://www.instagram.com/" target="_blank">
     <i class="fa-brands fa-instagram"></i>
     Instagram

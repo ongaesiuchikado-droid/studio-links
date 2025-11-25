@@ -24,22 +24,21 @@ body {
   border-radius: 15px;
   background: #000;
   text-align: center;
-  box-shadow: 0 0 15px #00ff8a33;
+  box-shadow: 0 0 12px #00ff8a22;
 }
 
-/* タイトル（発光強め） */
+/* タイトル */
 .sns-title {
   font-size: 32px;
   font-weight: 900;
   margin-bottom: 20px;
   color: #00ff8a;
   text-shadow:
-      0 0 6px #00ff8a55,
-      0 0 12px #00ff8a44,
-      0 0 18px #00ff8a33;
+      0 0 4px #00ff8a33,
+      0 0 8px #00ff8a22;
 }
 
-/* 電話 & 住所（ボタンなし） */
+/* 電話・住所 */
 .contact-line {
   display: flex;
   align-items: center;
@@ -52,29 +51,28 @@ body {
   transition: 0.25s;
 }
 
-/* ← ホバー時に文字・アイコンどっちも発光 */
+/* ← 光 弱め */
 .contact-line:hover {
-  color: #eafff4;
+  color: #eafff5;
   text-shadow:
-      0 0 3px #00ff8a,
-      0 0 6px #00ff8a,
-      0 0 10px #00ff8a;
+      0 0 4px #00ff8a55,
+      0 0 6px #00ff8a33;
 }
 
 .contact-line:hover .contact-icon svg {
-  fill: #eafff4;
-  filter: drop-shadow(0 0 4px #00ff8a)
-          drop-shadow(0 0 8px #00ff8a);
+  fill: #eafff5;
+  filter: drop-shadow(0 0 4px #00ff8a55);
 }
 
-/* 電話/住所アイコン */
+/* アイコン */
 .contact-icon svg {
   width: 22px;
   height: 22px;
   fill: #00ff8a;
+  transition: 0.25s;
 }
 
-/* SNSリンク部分 */
+/* SNSリンク全体 */
 .sns-links {
   display: flex;
   flex-direction: column;
@@ -93,7 +91,7 @@ body {
   color: #00ff8a;
   font-weight: 700;
   text-decoration: none;
-  transition: 0.2s;
+  transition: 0.25s;
   justify-content: flex-start;
 }
 
@@ -102,23 +100,19 @@ body {
   width: 26px;
   height: 26px;
   fill: #00ff8a;
+  transition: 0.25s;
 }
 
-/* SNS hover（文字とアイコンを発光） */
+/* SNSホバー（光弱め） */
 .sns-item:hover {
   background: #111;
-  box-shadow: 0 0 12px #00ff8a66;
-  color: #eafff4;
-  text-shadow:
-      0 0 3px #00ff8a,
-      0 0 6px #00ff8a,
-      0 0 10px #00ff8a;
+  box-shadow: 0 0 8px #00ff8a55;
+  color: #eafff5;
 }
 
 .sns-item:hover .sns-icon svg {
-  fill: #eafff4;
-  filter: drop-shadow(0 0 4px #00ff8a)
-          drop-shadow(0 0 8px #00ff8a);
+  fill: #eafff5;
+  filter: drop-shadow(0 0 4px #00ff8a55);
 }
 </style>
 </head>
@@ -167,7 +161,7 @@ body {
     <!-- YouTube -->
     <a href="https://youtube.com/___" class="sns-item">
       <span class="sns-icon">
-        <svg viewBox="0 0 24 24"><path d="M21.8 8.001s-.2-1.403-.8-2.022c-.77-.814-1.635-.818-2.033-.866C15.733 5 12 5 12 5h-.014s-3.733 0-6.953.113c-.398.048-1.263.052-2.033.866-.6.619-.8 2.022-.8 2.022S2 9.748 2 11.494v1.009c0 1.746.2 3.493.2 3.493s.2 1.403.8 2.022c.77.814 1.78.789 2.228.875C7.267 19 12 19 12 19s3.733 0 6.953-.113c.398.048 1.263.052 2.033-.866.6-.619.8-2.022.8-2.022s.2-1.747.2-3.493v-1.009c0-1.746-.2-3.493-.2-3.493zM10 15.5v-6l5.5 3-5.5 3z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M21.8 8.001s-.2-1.403-.8-2.022c-.77-.814-1.635-.818-2.033-.866C15.733 5 12 5 12 5h-.014s-3.733 0-6.953.113c-.398.048-1.263.052-2.033.866-.6.619-.8 2.022-.8 2.022S2 9.748 2 11.494v1.009c0 1.746.2 3.493.2 3.493s.2 1.403.8 2.022c.77.814 1.78.789 2.228.875C7.267 19 12 19 12 19s3.733 0 6.953-.113c.398-.048 1.263-.052 2.033-.866.6-.619.8-2.022.8-2.022s.2-1.747.2-3.493v-1.009c0-1.746-.2-3.493-.2-3.493zM10 15.5v-6l5.5 3-5.5 3z"/></svg>
       </span>
       YouTube
     </a>

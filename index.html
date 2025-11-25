@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Studio Bebop Links</title>
 
 <style>
-/* 背景：黒 → ダークグリーンのグラデ ＋ ノイズ */
+/* 全体 */
 body {
-  background: linear-gradient(180deg, #000000, #001a10);
-  background-attachment: fixed;
+  background: #000;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -17,42 +16,39 @@ body {
   text-align: center;
 }
 
-/* ノイズテクスチャ */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0.07;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5f/Noise_texture.png");
+/* ロゴ */
+.logo-img {
+  width: 180px;
+  margin: 30px auto 10px;
+  display: block;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 8px #00ff8a55);
 }
 
 /* カード */
 .sns-card {
   width: 330px;
-  margin: 40px auto;
+  margin: 20px auto 60px;
   padding: 25px 20px;
   border-radius: 15px;
-  background: #000000cc;
+  background: #000;
   text-align: center;
   box-shadow: 0 0 15px #00ff8a33;
-  position: relative;
-  z-index: 5;
 }
 
-/* タイトル */
+/* タイトル（発光強め） */
 .sns-title {
   font-size: 32px;
   font-weight: 900;
   margin-bottom: 20px;
   color: #00ff8a;
-  text-shadow: 0 0 6px #00ff8a55, 0 0 12px #00ff8a44, 0 0 18px #00ff8a33;
+  text-shadow:
+      0 0 6px #00ff8a55,
+      0 0 12px #00ff8a44,
+      0 0 18px #00ff8a33;
 }
 
-/* 電話・住所 */
+/* 電話 & 住所（ボタンなし） */
 .contact-line {
   display: flex;
   align-items: center;
@@ -65,23 +61,29 @@ body::before {
   transition: 0.25s;
 }
 
+/* ホバーでアイコン＆文字発光 */
 .contact-line:hover {
   color: #eafff4;
-  text-shadow: 0 0 3px #00ff8a, 0 0 6px #00ff8a, 0 0 10px #00ff8a;
+  text-shadow:
+      0 0 3px #00ff8a,
+      0 0 6px #00ff8a,
+      0 0 10px #00ff8a;
 }
 
 .contact-line:hover .contact-icon svg {
   fill: #eafff4;
-  filter: drop-shadow(0 0 4px #00ff8a) drop-shadow(0 0 8px #00ff8a);
+  filter: drop-shadow(0 0 4px #00ff8a)
+          drop-shadow(0 0 8px #00ff8a);
 }
 
+/* 電話/住所アイコン */
 .contact-icon svg {
   width: 22px;
   height: 22px;
   fill: #00ff8a;
 }
 
-/* SNS */
+/* SNSリンク部分 */
 .sns-links {
   display: flex;
   flex-direction: column;
@@ -89,6 +91,7 @@ body::before {
   margin-top: 20px;
 }
 
+/* SNSボタン */
 .sns-item {
   display: flex;
   align-items: center;
@@ -103,29 +106,39 @@ body::before {
   justify-content: flex-start;
 }
 
+/* SNSアイコン */
 .sns-icon svg {
   width: 26px;
   height: 26px;
   fill: #00ff8a;
 }
 
+/* SNS hover */
 .sns-item:hover {
   background: #111;
   box-shadow: 0 0 12px #00ff8a66;
   color: #eafff4;
-  text-shadow: 0 0 3px #00ff8a, 0 0 6px #00ff8a, 0 0 10px #00ff8a;
+  text-shadow:
+      0 0 3px #00ff8a,
+      0 0 6px #00ff8a,
+      0 0 10px #00ff8a;
 }
 
 .sns-item:hover .sns-icon svg {
   fill: #eafff4;
-  filter: drop-shadow(0 0 4px #00ff8a) drop-shadow(0 0 8px #00ff8a);
+  filter: drop-shadow(0 0 4px #00ff8a)
+          drop-shadow(0 0 8px #00ff8a);
 }
 </style>
 </head>
 
 <body>
 
+<!-- ▼ ロゴ（後で差し替えOK） -->
+<img src="logo.png" alt="studio bebop logo" class="logo-img">
+
 <div class="sns-card">
+
   <h1 class="sns-title">STUDIO BEBOP</h1>
 
   <!-- 電話 -->
@@ -140,13 +153,14 @@ body::before {
   <a href="https://www.google.com/maps?q=福岡県糟屋郡新宮町上府北２丁目９−６０"
      class="contact-line" target="_blank">
     <span class="contact-icon">
-      <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 112.5-2.5A2.5 2.5 0 01112 11.5z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 112.5-2.5A2.5 2.5 0 0112 11.5z"/></svg>
     </span>
     福岡県糟屋郡新宮町上府北２丁目９−６０
   </a>
 
   <div class="sns-links">
 
+    <!-- Instagram -->
     <a href="https://www.instagram.com/bebop_fukuoka" class="sns-item">
       <span class="sns-icon">
         <svg viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zM12 7a5 5 0 100 10 5 5 0 000-10zm5.5-.5a1.5 1.5 0 11-3 .001 1.5 1.5 0 013-.001z"/></svg>
@@ -154,6 +168,7 @@ body::before {
       Instagram
     </a>
 
+    <!-- X -->
     <a href="https://x.com/bebop_fukuoka" class="sns-item">
       <span class="sns-icon">
         <svg viewBox="0 0 24 24"><path d="M18.146 2H21l-7.59 8.602L22 22h-7.184l-5.01-6.447L4.41 22H2l8.218-9.3L2 2h7.297l4.713 6.118L18.146 2z"/></svg>
@@ -161,12 +176,24 @@ body::before {
       X（Twitter）
     </a>
 
+    <!-- YouTube -->
     <a href="https://www.youtube.com/channel/UCRZTBE78w2dsmu2mYCWUhLQ" class="sns-item">
-      <span class="sns-icon"><svg viewBox="0 0 24 24"><path d="M21.8 8.001s-.2-1.403-.8-2.022c-.77-.814-1.635-.818-2.033-.866C15.733 5 12 5 12 5h-.014s-3.733 0-6.953.113c-.398.048-1.263.052-2.033.866-.6.619-.8 2.022-.8 2.022S2 9.748 2 11.494v1.009c0 1.746.2 3.493.2 3.493s.2 1.403.8 2.022c.77.814 1.78.789 2.228.875C7.267 19 12 19 12 19s3.733 0 6.953-.113c.398.048 1.263.052 2.033-.866.6-.619.8-2.022.8-2.022s.2-1.747.2-3.493v-1.009c0-1.746-.2-3.493-.2-3.493zM10 15.5v-6l5.5 3-5.5 3z"/></svg></span>
+      <span class="sns-icon">
+        <svg viewBox="0 0 24 24"><path d="M21.8 8.001s-.2-1.403-.8-2.022c-.77-.814-1.635-.818-2.033-.866C15.733 5 12 5 12 5h-.014s-3.733 0-6.953.113c-.398.048-1.263.052-2.033.866-.6.619-.8 2.022-.8 2.022S2 9.748 2 11.494v1.009c0 1.746.2 3.493.2 3.493s.2 1.403.8 2.022c.77.814 1.78.789 2.228.875C7.267 19 12 19 12 19s3.733 0 6.953-.113c.398.048 1.263.052 2.033-.866.6-.619.8-2.022.8-2.022s.2-1.747.2-3.493v-1.009c0-1.746-.2-3.493-.2-3.493zM10 15.5v-6l5.5 3-5.5 3z"/></svg>
+      </span>
       YouTube
     </a>
 
+    <!-- Facebook（新規追加） -->
+    <a href="https://www.facebook.com" class="sns-item">
+      <span class="sns-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12H18l-.5 3h-2.3v7A10 10 0 0022 12z"/></svg>
+      </span>
+      Facebook
+    </a>
+
   </div>
+
 </div>
 
 </body>

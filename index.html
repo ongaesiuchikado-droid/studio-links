@@ -52,18 +52,8 @@ body {
   transition: 0.25s;
 }
 
+/* ← ホバー時に文字・アイコンどっちも発光 */
 .contact-line:hover {
-  color: #eafff4; /* ← 白寄りミント */
-  text-shadow:
-      0 0 3px #00ff8a,
-      0 0 6px #00ff8a,
-      0 0 10px #00ff8a;
-}
-
-/* SNS hover（ふち取り発光追加） */
-.sns-item:hover {
-  background: #111;
-  box-shadow: 0 0 12px #00ff8a66;
   color: #eafff4;
   text-shadow:
       0 0 3px #00ff8a,
@@ -71,11 +61,17 @@ body {
       0 0 10px #00ff8a;
 }
 
+.contact-line:hover .contact-icon svg {
+  fill: #eafff4;
+  filter: drop-shadow(0 0 4px #00ff8a)
+          drop-shadow(0 0 8px #00ff8a);
+}
+
 /* 電話/住所アイコン */
 .contact-icon svg {
   width: 22px;
   height: 22px;
-  fill: currentColor; /* ← text色に合わせて変わる！ */
+  fill: #00ff8a;
 }
 
 /* SNSリンク部分 */
@@ -86,7 +82,7 @@ body {
   margin-top: 20px;
 }
 
-/* SNSボタン（最初のやつ） */
+/* SNSボタン */
 .sns-item {
   display: flex;
   align-items: center;
@@ -101,18 +97,28 @@ body {
   justify-content: flex-start;
 }
 
-/* SNSアイコン（緑） */
+/* SNSアイコン */
 .sns-icon svg {
   width: 26px;
   height: 26px;
-  fill: currentColor; /* ← text色に合わせて変わる！ */
+  fill: #00ff8a;
 }
 
-/* SNS hover（ふんわり＋白っぽい色に） */
+/* SNS hover（文字とアイコンを発光） */
 .sns-item:hover {
   background: #111;
   box-shadow: 0 0 12px #00ff8a66;
-  color: #d9fff3; /* ← 明るく白寄り */
+  color: #eafff4;
+  text-shadow:
+      0 0 3px #00ff8a,
+      0 0 6px #00ff8a,
+      0 0 10px #00ff8a;
+}
+
+.sns-item:hover .sns-icon svg {
+  fill: #eafff4;
+  filter: drop-shadow(0 0 4px #00ff8a)
+          drop-shadow(0 0 8px #00ff8a);
 }
 </style>
 </head>
@@ -161,7 +167,7 @@ body {
     <!-- YouTube -->
     <a href="https://youtube.com/___" class="sns-item">
       <span class="sns-icon">
-        <svg viewBox="0 0 24 24"><path d="M21.8 8.001s-.2-1.403-.8-2.022c-.77-.814-1.635-.818-2.033-.866C15.733 5 12 5 12 5h-.014s-3.733 0-6.953.113c-.398.048-1.263.052-2.033.866-.6.619-.8 2.022-.8 2.022S2 9.748 2 11.494v1.009c0 1.746.2 3.493.2 3.493s.2 1.403.8 2.022c.77.814 1.78.789 2.228.875C7.267 19 12 19 12 19s3.733 0 6.953-.113c.398-.048 1.263-.052 2.033-.866.6-.619.8-2.022.8-2.022s.2-1.747.2-3.493v-1.009c0-1.746-.2-3.493-.2-3.493zM10 15.5v-6l5.5 3-5.5 3z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M21.8 8.001s-.2-1.403-.8-2.022c-.77-.814-1.635-.818-2.033-.866C15.733 5 12 5 12 5h-.014s-3.733 0-6.953.113c-.398.048-1.263.052-2.033.866-.6.619-.8 2.022-.8 2.022S2 9.748 2 11.494v1.009c0 1.746.2 3.493.2 3.493s.2 1.403.8 2.022c.77.814 1.78.789 2.228.875C7.267 19 12 19 12 19s3.733 0 6.953-.113c.398.048 1.263.052 2.033-.866.6-.619.8-2.022.8-2.022s.2-1.747.2-3.493v-1.009c0-1.746-.2-3.493-.2-3.493zM10 15.5v-6l5.5 3-5.5 3z"/></svg>
       </span>
       YouTube
     </a>

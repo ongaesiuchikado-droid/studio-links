@@ -27,57 +27,60 @@ body {
   box-shadow: 0 0 15px #00ff8a33;
 }
 
-/* タイトル発光（強め）*/
+/* タイトル発光（さらに強め）*/
 .sns-title {
   font-size: 32px;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #00ff8a;
   text-shadow:
       0 0 8px #00ff8a88,
-      0 0 15px #00ff8a66,
-      0 0 25px #00ff8a44;
+      0 0 14px #00ff8a66,
+      0 0 20px #00ff8a55;
 }
 
 /* 電話番号 */
-.tel-number {
-  font-size: 20px;
-  font-weight: 700;
+.tel {
   margin-bottom: 10px;
 }
-
-.tel-number a {
+.tel a {
   color: #00ff8a;
+  font-size: 20px;
+  font-weight: 800;
   text-decoration: none;
   text-shadow:
-      0 0 6px #00ff8a55,
-      0 0 10px #00ff8a44;
+    0 0 6px #00ff8a66,
+    0 0 10px #00ff8a55;
+  transition: 0.25s;
 }
-
-.tel-number a:hover {
+.tel a:hover {
+  color: #66ffbf;
   text-shadow:
-      0 0 10px #00ff8a99,
-      0 0 18px #00ff8a66;
+    0 0 10px #00ff8a,
+    0 0 16px #00ff8a,
+    0 0 22px #00ff8a;
 }
 
-/* 住所（Googleマップリンク）*/
+/* 住所リンク（電話と同じテイスト） */
 .address {
-  font-size: 15px;
   margin-bottom: 25px;
-  line-height: 1.4;
 }
-
 .address a {
-    font-family: 'Orbitron', sans-serif;  /* タイトルと同じ系統で統一感 */
-    font-weight: 700;                     /* 太字 */
-    font-size: 1.1em;                     /* 少し大きく */
-    color: #00ff66;                       /* 緑寄りで整合性をキープ */
-}
-  
-.address a:hover {
+  color: #00ff8a;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
   text-shadow:
-      0 0 10px #00ff8a99,
-      0 0 18px #00ff8a66;
+    0 0 4px #00ff8a55,
+    0 0 7px #00ff8a44;
+  transition: 0.25s;
+}
+.address a:hover {
+  color: #66ffbf;
+  text-shadow:
+    0 0 10px #00ff8a,
+    0 0 16px #00ff8a,
+    0 0 22px #00ff8a;
 }
 
 /* SNSリンク縦並び */
@@ -85,7 +88,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: center;
 }
 
 /* SNSボタン */
@@ -100,7 +102,6 @@ body {
   font-weight: 700;
   text-decoration: none;
   transition: 0.2s;
-  width: 85%;
   justify-content: flex-start;
 }
 
@@ -125,14 +126,14 @@ body {
 
   <h1 class="sns-title">STUDIO BEBOP</h1>
 
-  <!-- 電話番号（タップで発信） -->
-  <div class="tel-number">
+  <!-- 電話番号 -->
+  <div class="tel">
     <a href="tel:0929630895">☎️ 092-963-0895</a>
   </div>
 
-  <!-- 住所（Googleマップリンク） -->
+  <!-- 住所（Googleマップへリンク） -->
   <div class="address">
-    <a href="https://www.google.com/maps/search/?api=1&query=福岡県糟屋郡新宮町上府北2丁目9-60" target="_blank">
+    <a href="https://maps.google.com/?q=福岡県糟屋郡新宮町上府北２丁目９−６０" target="_blank">
       福岡県糟屋郡新宮町上府北２丁目９−６０
     </a>
   </div>

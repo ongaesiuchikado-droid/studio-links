@@ -52,16 +52,17 @@ body {
   transition: 0.25s;
 }
 
-/* ← 追加した "ふんわり光る" */
+/* ← ホバーで白っぽく明るく */
 .contact-line:hover {
-  text-shadow: 0 0 30px #00ff8a55, 0 0 50px #00ff8a44;
+  color: #ccffe8;
+  text-shadow: 0 0 8px #ccffe877;
 }
 
 /* 電話/住所アイコン */
 .contact-icon svg {
   width: 22px;
   height: 22px;
-  fill: #00ff8a;
+  fill: currentColor; /* ← text色に合わせて変わる！ */
 }
 
 /* SNSリンク部分 */
@@ -91,13 +92,14 @@ body {
 .sns-icon svg {
   width: 26px;
   height: 26px;
-  fill: #00ff8a;
+  fill: currentColor; /* ← text色に合わせて変わる！ */
 }
 
-/* SNS hover（ふんわり光る） */
+/* SNS hover（ふんわり＋白っぽい色に） */
 .sns-item:hover {
   background: #111;
   box-shadow: 0 0 12px #00ff8a66;
+  color: #d9fff3; /* ← 明るく白寄り */
 }
 </style>
 </head>

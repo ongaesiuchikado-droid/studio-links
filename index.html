@@ -52,10 +52,23 @@ body {
   transition: 0.25s;
 }
 
-/* ← ホバーで白っぽく明るく */
 .contact-line:hover {
-  color: #ccffe8;
-  text-shadow: 0 0 8px #ccffe877;
+  color: #eafff4; /* ← 白寄りミント */
+  text-shadow:
+      0 0 3px #00ff8a,
+      0 0 6px #00ff8a,
+      0 0 10px #00ff8a;
+}
+
+/* SNS hover（ふち取り発光追加） */
+.sns-item:hover {
+  background: #111;
+  box-shadow: 0 0 12px #00ff8a66;
+  color: #eafff4;
+  text-shadow:
+      0 0 3px #00ff8a,
+      0 0 6px #00ff8a,
+      0 0 10px #00ff8a;
 }
 
 /* 電話/住所アイコン */

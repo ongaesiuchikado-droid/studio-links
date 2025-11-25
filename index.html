@@ -1,159 +1,119 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Studio Bebop Links</title>
 
 <style>
+/* 全体の背景とフォント */
 body {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
 }
-    .glow-green {
-  font-family: 'Orbitron', sans-serif;
-  color: #ffffff;
-  font-weight: 700;
+
+/* カード本体 */
+.sns-card {
+  width: 330px;
+  margin: 40px auto;
+  padding: 25px 20px;
+  border-radius: 15px;
+  background: #000;
+  text-align: center;
+  box-shadow: 0 0 15px #00ff8a33;
+}
+
+/* タイトル */
+.sns-title {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+/* 緑の発光効果 */
+.glow-text {
+  color: #00ff8a;
   text-shadow:
-    0 0 5px #00ff66,
-    0 0 10px #00ff66,
-    0 0 20px #00ff66,
-    0 0 30px #00ff66,
-    0 0 40px #00ff66;
+    0 0 5px #00ff8a,
+    0 0 10px #00ff8a,
+    0 0 20px #00ff8a,
+    0 0 30px #00ff8a;
 }
 
-/* カード全体 */
-.profile-card {
-    margin: 40px auto;
-    background: #111;
-    padding: 30px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 420px;
-    box-shadow: 0 0 20px #0f0;
+/* SNSリンクの並び（縦並び） */
+.sns-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-/* ロゴ（丸枠） */
-.logo-circle {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 15px;
-    border: 4px solid #0f0;
+/* SNSボタン */
+.sns-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: #0d0d0d;
+  color: #00ff8a;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s;
+  justify-content: flex-start;
 }
 
-.logo-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* アイコンの色と大きさ */
+.sns-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: #00ff8a;
 }
 
-/* “Studio Bebop” の文字 */
-.studio-name {
-    font-size: 28px;
-    margin-bottom: 5px;
-    color: #0f0;
-}
-
-/* 電話番号リンク */
-.phone {
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-.phone a {
-    color: #0f0;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* SNS アイコンの並び */
-.icon-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-/* アイコン1個あたり */
-.icon-box {
-    text-align: center;
-}
-
-.icon-box img {
-    width: 70px;
-    border-radius: 15px;
-    padding: 10px;
-    background: #111;
-    box-shadow: 0 0 10px #0f0;
-}
-
-.icon-box span {
-    display: block;
-    margin-top: 8px;
-    font-size: 14px;
-}
-
-/* スマホ縦並び */
-@media (max-width: 600px) {
-    .icon-container {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .icon-box img {
-        width: 90px;
-    }
+/* hoverで光る */
+.sns-item:hover {
+  background: #111;
+  box-shadow: 0 0 12px #00ff8a66;
 }
 </style>
 </head>
 
 <body>
 
-<div class="profile-card">
+<div class="sns-card">
 
-    <!-- ロゴ丸アイコン -->
-    <div class="logo-circle">
-        <img src="logo.png" alt="Studio Bebop Logo">
-    </div>
+  <h1 class="sns-title glow-text">STUDIO BEBOP</h1>
 
-    <!-- 店名 -->
-    <div class="studio-name">Studio Bebop</div>
+  <div class="sns-links">
 
-    <!-- 電話番号（タップで発信） -->
-    <div class="phone">
-        <a href="tel:090-0000-0000">📞 090-0000-0000</a>
-    </div>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/___" class="sns-item">
+      <span class="sns-icon">
+        <svg viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zM12 7a5 5 0 100 10 5 5 0 000-10zm5.5-.5a1.5 1.5 0 11-3 .001 1.5 1.5 0 013-.001z"/></svg>
+      </span>
+      Instagram
+    </a>
 
-    <!-- SNS リンク -->
-    <div class="icon-container">
+    <!-- X（Twitter） -->
+    <a href="https://x.com/___" class="sns-item">
+      <span class="sns-icon">
+        <svg viewBox="0 0 24 24"><path d="M18.146 2H21l-7.59 8.602L22 22h-7.184l-5.01-6.447L4.41 22H2l8.218-9.3L2 2h7.297l4.713 6.118L18.146 2z"/></svg>
+      </span>
+      X（Twitter）
+    </a>
 
-        <div class="icon-box">
-            <a href="https://instagram.com/___">
-                <img src="insta.png" alt="Instagram">
-            </a>
-            <span>Instagram</span>
-        </div>
+    <!-- YouTube -->
+    <a href="https://youtube.com/___" class="sns-item">
+      <span class="sns-icon">
+        <svg viewBox="0 0 24 24"><path d="M21.8 8.001s-.2-1.403-.8-2.022c-.77-.814-1.635-.818-2.033-.866C15.733 5 12 5 12 5h-.014s-3.733 0-6.953.113c-.398.048-1.263.052-2.033.866-.6.619-.8 2.022-.8 2.022S2 9.748 2 11.494v1.009c0 1.746.2 3.493.2 3.493s.2 1.403.8 2.022c.77.814 1.78.789 2.228.875C7.267 19 12 19 12 19s3.733 0 6.953-.113c.398-.048 1.263-.052 2.033-.866.6-.619.8-2.022.8-2.022s.2-1.747.2-3.493v-1.009c0-1.746-.2-3.493-.2-3.493zM10 15.5v-6l5.5 3-5.5 3z"/></svg>
+      </span>
+      YouTube
+    </a>
 
-        <div class="icon-box">
-            <a href="https://twitter.com/___">
-                <img src="x.png" alt="X">
-            </a>
-            <span>X (Twitter)</span>
-        </div>
-
-        <div class="icon-box">
-            <a href="https://youtube.com/___">
-                <img src="youtube.png" alt="YouTube">
-            </a>
-            <span>YouTube</span>
-        </div>
-
-    </div>
+  </div>
 
 </div>
 

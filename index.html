@@ -27,24 +27,45 @@ body {
   box-shadow: 0 0 15px #00ff8a33;
 }
 
-/* タイトル発光（前より強め）*/
+/* タイトル発光（強め）*/
 .sns-title {
   font-size: 32px;
   font-weight: 900;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   color: #00ff8a;
   text-shadow:
-      0 0 8px #00ff8a88,    /* 強めの光 */
+      0 0 8px #00ff8a88,
       0 0 15px #00ff8a66,
-      0 0 25px #00ff8a44;   /* 外側ぼんやり */
+      0 0 25px #00ff8a44;
 }
 
-/* SNSリンク縦並び・中央揃え */
+/* 電話番号 */
+.tel-number {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.tel-number a {
+  color: #00ff8a;
+  text-decoration: none;
+  text-shadow:
+      0 0 6px #00ff8a55,
+      0 0 10px #00ff8a44;
+}
+
+.tel-number a:hover {
+  text-shadow:
+      0 0 10px #00ff8a99,
+      0 0 18px #00ff8a66;
+}
+
+/* SNSリンク縦並び */
 .sns-links {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: center;  /* ← ボタン全体を中央に寄せる */
+  align-items: center;
 }
 
 /* SNSボタン */
@@ -59,7 +80,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   transition: 0.2s;
-  width: 85%;           /* ← 見た目を整えるためボタン幅を固定 */
+  width: 85%;
   justify-content: flex-start;
 }
 
@@ -83,6 +104,11 @@ body {
 <div class="sns-card">
 
   <h1 class="sns-title">STUDIO BEBOP</h1>
+
+  <!-- 電話番号（タップで発信） -->
+  <div class="tel-number">
+    <a href="tel:0929630895">☎️ 092-963-0895</a>
+  </div>
 
   <div class="sns-links">
 

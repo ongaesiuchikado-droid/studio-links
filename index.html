@@ -27,23 +27,24 @@ body {
   box-shadow: 0 0 15px #00ff8a33;
 }
 
-/* タイトル発光（少し強め）*/
+/* タイトル発光（前より強め）*/
 .sns-title {
   font-size: 32px;
   font-weight: 900;
   margin-bottom: 25px;
-  color: #00ff8a; /* 緑 */
+  color: #00ff8a;
   text-shadow:
-      0 0 6px #00ff8a55,
-      0 0 10px #00ff8a44,
-      0 0 14px #00ff8a33;  /* 少し強めの発光 */
+      0 0 8px #00ff8a88,    /* 強めの光 */
+      0 0 15px #00ff8a66,
+      0 0 25px #00ff8a44;   /* 外側ぼんやり */
 }
 
-/* SNSリンク縦並び */
+/* SNSリンク縦並び・中央揃え */
 .sns-links {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items: center;  /* ← ボタン全体を中央に寄せる */
 }
 
 /* SNSボタン */
@@ -58,6 +59,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   transition: 0.2s;
+  width: 85%;           /* ← 見た目を整えるためボタン幅を固定 */
   justify-content: flex-start;
 }
 

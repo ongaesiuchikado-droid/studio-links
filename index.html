@@ -6,7 +6,7 @@
 <title>Studio Bebop Links</title>
 
 <style>
-/* 全体の背景とフォント */
+/* 全体 */
 body {
   background: #000;
   color: #fff;
@@ -16,7 +16,7 @@ body {
   text-align: center;
 }
 
-/* カード本体 */
+/* カード */
 .sns-card {
   width: 330px;
   margin: 40px auto;
@@ -24,19 +24,22 @@ body {
   border-radius: 15px;
   background: #000;
   text-align: center;
-  box-shadow: 0 0 10px #00ff8a33;
+  box-shadow: 0 0 15px #00ff8a33;
 }
 
-/* タイトル */
+/* タイトル発光（少し強め）*/
 .sns-title {
-  color: #00ff8a; /* メインの緑 */
-  text-shadow:
-    0 0 20px #00ff8a44,
-    0 0 40px #00ff8a33; /* 弱めの発光 */
+  font-size: 32px;
   font-weight: 900;
+  margin-bottom: 25px;
+  color: #00ff8a; /* 緑 */
+  text-shadow:
+      0 0 6px #00ff8a55,
+      0 0 10px #00ff8a44,
+      0 0 14px #00ff8a33;  /* 少し強めの発光 */
 }
 
-/* SNSリンクの並び（縦並び） */
+/* SNSリンク縦並び */
 .sns-links {
   display: flex;
   flex-direction: column;
@@ -58,14 +61,14 @@ body {
   justify-content: flex-start;
 }
 
-/* アイコンの色と大きさ */
+/* アイコン */
 .sns-icon svg {
   width: 26px;
   height: 26px;
   fill: #00ff8a;
 }
 
-/* hoverで光る */
+/* ホバー */
 .sns-item:hover {
   background: #111;
   box-shadow: 0 0 12px #00ff8a66;
@@ -77,7 +80,7 @@ body {
 
 <div class="sns-card">
 
-  <h1 class="sns-title glow-text">STUDIO BEBOP</h1>
+  <h1 class="sns-title">STUDIO BEBOP</h1>
 
   <div class="sns-links">
 
@@ -89,7 +92,7 @@ body {
       Instagram
     </a>
 
-    <!-- X（Twitter） -->
+    <!-- X (Twitter) -->
     <a href="https://x.com/___" class="sns-item">
       <span class="sns-icon">
         <svg viewBox="0 0 24 24"><path d="M18.146 2H21l-7.59 8.602L22 22h-7.184l-5.01-6.447L4.41 22H2l8.218-9.3L2 2h7.297l4.713 6.118L18.146 2z"/></svg>
